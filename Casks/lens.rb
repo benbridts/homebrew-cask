@@ -1,8 +1,14 @@
 cask "lens" do
-  version "5.1.1-latest.20210716.1"
-  sha256 "c50288a70aaff7f4985e9777891a5a7fa9f25af7ad76d25e6900cb4ba29e2b01"
+  version "5.2.4-latest.20210923.1"
 
-  url "https://api.k8slens.dev/binaries/Lens-#{version}.dmg"
+  if Hardware::CPU.intel?
+    sha256 "dff581d68e9fbb2d0bc14def659ae39505b1987d1036483a4b191a38fca06f37"
+    url "https://api.k8slens.dev/binaries/Lens-#{version}.dmg"
+  else
+    sha256 "856fb5164974e32b4fdb1e181603d11b2788dfd78041305863bf6a909cfb6166"
+    url "https://api.k8slens.dev/binaries/Lens-#{version}-arm64.dmg"
+  end
+
   name "Lens"
   desc "Kubernetes IDE"
   homepage "https://k8slens.dev/"

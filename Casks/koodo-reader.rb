@@ -1,13 +1,13 @@
 cask "koodo-reader" do
-  version "1.2.7"
+  version "1.3.1"
 
   if Hardware::CPU.intel?
-    sha256 "ad5c839644db62cb8edbbd3b2f5aa9b74d28154bf5afe35497057bd48a35578b"
+    sha256 "fcb0ea3690c2e0a7649314bf3e53d7096b3d85420ccd34a283b3791f2c2f7e9a"
 
     url "https://github.com/troyeguo/koodo-reader/releases/download/v#{version}/Koodo-Reader-#{version}.dmg",
         verified: "github.com/troyeguo/koodo-reader/"
   else
-    sha256 "2ec9bce429a0fa81cdd81d1c1bc1fe69dd0bc0e332ad2c42d2a3be0b704eb21e"
+    sha256 "1539650c30a28ddef05a08818e1ecd0253ca7d583b61a004c6b0e55a5c8e1811"
 
     url "https://github.com/troyeguo/koodo-reader/releases/download/v#{version}/Koodo-Reader-#{version}-arm64.dmg",
         verified: "github.com/troyeguo/koodo-reader/"

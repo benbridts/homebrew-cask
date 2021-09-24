@@ -15,8 +15,8 @@ cask "evernote" do
 
     url "https://cdn1.evernote.com/mac-smd/public/Evernote_RELEASE_#{version}.dmg"
   else
-    version "10.17.6,2775"
-    sha256 "58c6a9e81e50102bd695ee63a0c604bfe2a5591e24dab09fd9fcb43657e49be9"
+    version "10.22.3,2958"
+    sha256 "7d85e7ce25f21d4312141489f166d699c45f5b7879098b11d40925a8dd1e93a5"
 
     url "https://cdn1.evernote.com/boron/mac/builds/Evernote-#{version.before_comma}-mac-ddl-ga-#{version.after_comma}.dmg"
   end
@@ -49,10 +49,10 @@ cask "evernote" do
     "~/Library/Application Support/com.evernote.EvernoteHelper",
     "~/Library/Application Support/Caches/evernote-client-updater",
     "~/Library/Caches/com.evernote.Evernote",
+    "~/Library/Cookies/com.evernote.Evernote.binarycookies",
+    "~/Library/Logs/Evernote",
     "~/Library/Preferences/com.evernote.Evernote.plist",
     "~/Library/Preferences/com.evernote.EvernoteHelper.plist",
-    "~/Library/Logs/Evernote",
-    "~/Library/Cookies/com.evernote.Evernote.binarycookies",
     "~/Library/Saved Application State/com.evernote.Evernote.savedState",
   ]
 end

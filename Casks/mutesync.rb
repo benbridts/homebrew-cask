@@ -1,6 +1,6 @@
 cask "mutesync" do
-  version "4.7.0"
-  sha256 "5614dab7186501ce8d376d92892a341ef3e31e7ffca7a107b38cfa5f2eb8ba06"
+  version "4.9.5"
+  sha256 "733729f52f2afb1f836c09642581b9d2642f68f1eb75a66cdf2d2c8e7013b6de"
 
   url "https://mutesync.s3-us-west-2.amazonaws.com/mutesync-#{version}.dmg",
       verified: "mutesync.s3-us-west-2.amazonaws.com/"

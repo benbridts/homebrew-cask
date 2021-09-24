@@ -1,6 +1,6 @@
 cask "wezterm" do
-  version "20210502-154244,3f7122cb"
-  sha256 "be8e235d5bf6b2876a993f8c084cd7bfc3cf8121e7aa99038d9209ee87dd9118"
+  version "20210814-124438,54e29167"
+  sha256 "1b3a86e881ad24dd93b39cc7c50478804482438f734aee7ca44cefa5384188a8"
 
   url "https://github.com/wez/wezterm/releases/download/#{version.before_comma}-#{version.after_comma}/WezTerm-macos-#{version.before_comma}-#{version.after_comma}.zip",
       verified: "github.com/wez/wezterm/"
@@ -10,8 +10,9 @@ cask "wezterm" do
 
   livecheck do
     url :url
-    strategy :github_latest do |page|
-      match = page.match(%r{href=.*?/WezTerm-macos-(\d{8}-\d{6})-([0-9a-f]+)\.zip}i)
+    regex(%r{href=.*?/WezTerm-macos-(\d{8}-\d{6})-([0-9a-f]+)\.zip}i)
+    strategy :github_latest do |page, regex|
+      match = page.match(regex)
       "#{match[1]},#{match[2]}"
     end
   end

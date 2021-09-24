@@ -6,8 +6,8 @@ cask "nextcloud" do
     url "https://github.com/nextcloud/desktop/releases/download/v#{version.major_minor_patch}/Nextcloud-#{version}.pkg",
         verified: "github.com/nextcloud/desktop/"
   else
-    version "3.2.4"
-    sha256 "124d09e3064be3bb1656f714f93e27f87a03297a219601bd97e3b68d3c9561b5"
+    version "3.3.4"
+    sha256 "a144235fd391dc7d40e486c9eb52bed4c68e3908d7b189f14b7da5605a337bac"
 
     url "https://github.com/nextcloud/desktop/releases/download/v#{version}/Nextcloud-#{version}.pkg",
         verified: "github.com/nextcloud/desktop/"
@@ -17,10 +17,15 @@ cask "nextcloud" do
   desc "Desktop sync client for Nextcloud software products"
   homepage "https://nextcloud.com/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on macos: ">= :yosemite"
 
   pkg "Nextcloud-#{version}.pkg"
-  binary "#{appdir}/nextcloud.app/Contents/MacOS/nextcloudcmd"
+  binary "#{appdir}/Nextcloud.app/Contents/MacOS/nextcloudcmd"
 
   uninstall pkgutil: "com.nextcloud.desktopclient"
 

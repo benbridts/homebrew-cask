@@ -1,10 +1,10 @@
 cask "eloston-chromium" do
   if Hardware::CPU.intel?
-    version "91.0.4472.164-1.1_x86-64"
-    sha256 "dd20b8267dffac78d00c0fbb6e95ddf38af4dfeb62b07934e115ebf046986b24"
+    version "94.0.4606.54-1.1_x86-64"
+    sha256 "107b6f84558912ccd2012fe49aec880ae9bc0f613c4fd8190c86a26e414251a0"
   else
-    version "91.0.4472.124-1.1_arm64"
-    sha256 "a2f494d997fc079268d4fff2d8292696035d65965f077dd33b8e8a7908a912f3"
+    version "94.0.4606.54-1.1_arm64"
+    sha256 "6a3e33b01dc7f5c435621875f3fa4cb4ebf01d9059cc9fcc72bcc11b78351e22"
   end
 
   url "https://github.com/kramred/ungoogled-chromium-macos/releases/download/#{version}/ungoogled-chromium_#{version}-macos.dmg",

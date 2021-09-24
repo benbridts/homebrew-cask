@@ -1,8 +1,8 @@
 cask "figma" do
-  version "99.0.0"
+  version "102.9.0"
 
   if Hardware::CPU.intel?
-    sha256 "9c94aa3dc73a74900814241c9795ac7663472b44eb3f88e8596ef62ecb5de5c3"
+    sha256 "88d30dc1fd870d32ae705828cafe77ace5120dab28a157824ba58405910cffbc"
 
     url "https://desktop.figma.com/mac/Figma-#{version}.zip"
 
@@ -11,7 +11,7 @@ cask "figma" do
       regex(%r{/Figma[._-]v?(\d+(?:\.\d+)+)\.zip}i)
     end
   else
-    sha256 "5eb4d1073ad671dc53ec1a00225e6adf1f8645b1d43a6774514cd96009f5fdd3"
+    sha256 "b1c1b23b1f31e98f11383582c32a84c1a2ea16a93cd09f1da91b2326328d30c1"
 
     url "https://desktop.figma.com/mac-arm/Figma-#{version}.zip"
 

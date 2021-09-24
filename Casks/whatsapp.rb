@@ -1,6 +1,6 @@
 cask "whatsapp" do
-  version "2.2126.11"
-  sha256 "01befd5a84fa24e2050701b4ba6cda5b441de60cf60e51ceb239f976c2c99821"
+  version "2.2136.10"
+  sha256 "ab5f025d0576189aa6d273c2375454b3f1cdf9496b2170e7e2ad565126d2bd79"
 
   url "https://web.whatsapp.com/desktop/mac/files/release-#{version}.zip"
   name "WhatsApp"
@@ -14,6 +14,7 @@ cask "whatsapp" do
   end
 
   auto_updates true
+  conflicts_with cask: "homebrew/cask-versions/whatsapp-beta"
 
   app "WhatsApp.app"
 

@@ -1,12 +1,12 @@
 cask "goland" do
-  version "2021.1.3,211.7442.57"
+  version "2021.2.3,212.5284.40"
 
   if Hardware::CPU.intel?
-    sha256 "b97594a62e97b8d562cc233ede8a5f398368e60282f473e7752753c5da0a9d32"
+    sha256 "49db62e1adeab0c41c1310ff3a1c24e91fc6297aff3d5b4ce7d9266a23bf2b21"
 
     url "https://download.jetbrains.com/go/goland-#{version.before_comma}.dmg"
   else
-    sha256 "755ff0c3b9a4f8cbca311a0afd319d3c1d78060f073b2ef7897fa7cc6177ffa3"
+    sha256 "3abcc5f600b579cff116b7fa45a90e4deb964e375ae42518446f26f080e97db7"
 
     url "https://download.jetbrains.com/go/goland-#{version.before_comma}-aarch64.dmg"
   end
